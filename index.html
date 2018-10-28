@@ -1,4 +1,4 @@
-﻿<!--
+<!--
        _             _      
       | |           (_)     
       | |_   _ _ __  _  ___ 
@@ -10,7 +10,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="icon" type="image/png" href="image/favicon.ico">
-		<title>Wan iu Tks</title>	    
+		<title>A ♥ B</title>	    
         <link type="text/css" rel="stylesheet" href="./renxi/default.css">
 		<script type="text/javascript" src="./renxi/jquery.min.js"></script>
 		<script type="text/javascript" src="./renxi/jscex.min.js"></script>
@@ -31,21 +31,23 @@
              <div id="wrap">
                 <div id="text">
 			        <div id="code">
-			      <font face="Comic Sans MS" color="#ff5464"><span class="say"><b><u>Hiiii Tks Ù w Ú</u>,</b></span><br>
+			      <font face="Comic Sans MS" color="#ff5464"><span class="say"><b><u>Chào A</u>,</b></span><br>
 						<span class="say"> </span><br>
-						<span class="say">Tks là người con gái Wan yêu nhất （＾ｖ＾）</span><br>
-						<span class="say">Tks là người xinh đẹp nhất （＞ｙ＜）</span><br>
-						<span class="say">Tks cute nhất ٩◔̯◔۶ </span><br>
-						<span class="say">Tks là một điều may mắn trong cuộc sống của Wan Ò w Ó</span><br>
-						<span class="say">..."Có Tks, Wan sẽ chẳng cần điều gì khác cả"</span><br>
-						<span class="say">Iu Tks cho đến khi nào Wan không còn tồn tại ♱♡‿♡♰</span><br>
+						<span class="say">A là người con gái anh yêu nhất :)</span><br>
+						<span class="say">A xinh đẹp nhất !</span><br>
+						<span class="say">A đáng yêu nhất !</span><br>
+						<span class="say">A là những gì tốt đẹp nhất !</span><br>
+						<span class="say">A là một điều may mắn trong cuộc sống của anh</span><br>
+						<span class="say">..."Có A, anh sẽ chẳng cần điều gì khác A cả"</span><br>
+						<span class="say">Yêu A cho đến khi nào anh không còn tồn tại ♥</span><br>
+						<span class="say">Hãy cứ tin A nhé. 'Ta sẽ có một chuyến đi thật dài và đích đến là hôn lễ' :*</span><br>
 						<span class="say"> </span><br>
-                        <span class="say"><span class="space"></span><i> ♥ Iu Tks thật nhiều ♥ </i></span>
+                        <span class="say"><span class="space"></span><i> ♥♥ Yêu A thật nhiều ♥♥ </i></span>
 			  </font></p>
       </div>
                 </div>
                 <div id="clock-box">
-                    <span class="STYLE1"></span><font face="Comic Sans MS" color="#FF1E1E">Wan ♥ Tks</font>
+                    <span class="STYLE1"></span><font face="Comic Sans MS" color="#FF1E1E">A ♥ B</font>
 <span class="STYLE1"> Time of love...</span>
                   <div id="clock"></div>
               </div>
@@ -64,7 +66,6 @@
         if (!canvas[0].getContext) {
             $("#error").show();
             return false;        }
-
         var width = canvas.width();
         var height = canvas.height();        
         canvas.attr("width", width);
@@ -104,12 +105,10 @@
                 speed: 10,
             }
         }
-
         var tree = new Tree(canvas[0], width, height, opts);
         var seed = tree.seed;
         var foot = tree.footer;
         var hold = 1;
-
         canvas.click(function(e) {
             var offset = canvas.offset(), x, y;
             x = e.pageX - offset.left;
@@ -126,7 +125,6 @@
             y = e.pageY - offset.top;
             canvas.toggleClass('hand', seed.hover(x, y));
         });
-
         var seedAnimate = eval(Jscex.compile("async", function () {
             seed.draw();
             while (hold) {
@@ -142,21 +140,18 @@
                 $await(Jscex.Async.sleep(10));
             }
         }));
-
         var growAnimate = eval(Jscex.compile("async", function () {
             do {
     	        tree.grow();
                 $await(Jscex.Async.sleep(10));
             } while (tree.canGrow());
         }));
-
         var flowAnimate = eval(Jscex.compile("async", function () {
             do {
     	        tree.flower(2);
                 $await(Jscex.Async.sleep(10));
             } while (tree.canFlower());
         }));
-
         var moveAnimate = eval(Jscex.compile("async", function () {
             tree.snapshot("p1", 240, 0, 610, 680);
             while (tree.move("p1", 500, 0)) {
@@ -165,13 +160,11 @@
             }
             foot.draw();
             tree.snapshot("p2", 500, 0, 610, 680);
-
             canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
             canvas.css("background", "#ffe");
             $await(Jscex.Async.sleep(300));
             canvas.css("background", "none");
         }));
-
         var jumpAnimate = eval(Jscex.compile("async", function () {
             var ctx = tree.ctx;
             while (true) {
@@ -181,16 +174,14 @@
                 $await(Jscex.Async.sleep(25));
             }
         }));
-
         var textAnimate = eval(Jscex.compile("async", function () {
 		    var together = new Date();
-		    var year = 2018, month = 9, day = 7;
+		    var year = 2004, month = 9, day = 7;
 		    together.setFullYear(year, month - 1, day); 			
 		    together.setHours(0);							
 		    together.setMinutes(0);				
 		    together.setSeconds(0);					
 		    together.setMilliseconds(0);			
-
 		    $("#code").show().typewriter();
             $("#clock-box").fadeIn(500);
             while (true) {
@@ -198,22 +189,19 @@
                 $await(Jscex.Async.sleep(1000));
             }
         }));
-
         var runAsync = eval(Jscex.compile("async", function () {
             $await(seedAnimate());
             $await(growAnimate());
             $await(flowAnimate());
             $await(moveAnimate());
-
             textAnimate().start();
-
             $await(jumpAnimate());
         }));
-
         runAsync().start();
     })();
     </script>
-<iframe width="0%" height="0" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/475010376&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><!--
+	<iframe src="https://www.nhaccuatui.com/mh/auto/eZqJdBiX1raA" width="0" height="0" frameborder="0" allowfullscreen></iframe>
+<!--
        _             _      
       | |           (_)     
       | |_   _ _ __  _  ___ 
